@@ -30,7 +30,7 @@ const Navbar = () => {
         }> Installation</NavLink >
     ]
     return (
-        <div className="navbar text-black shadow-sm px-20 py-2 inter">
+        <div className="navbar text-black shadow-sm px-10 md:px-16 lg:px-20 py-2 inter">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
