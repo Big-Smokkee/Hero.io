@@ -1,9 +1,12 @@
 import React from 'react';
+import Hero from '../../components/Hero/Hero';
+import Sticker from '../../components/Sticker/Sticker';
 
 const Home = () => {
     return (
         <div className='text-black'>
-            <h3>This is Home</h3>
+            <Hero></Hero>
+            <Sticker></Sticker>
         </div>
     );
 };
