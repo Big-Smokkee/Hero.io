@@ -1,0 +1,542 @@
+[
+  {
+    "id": 1,
+    "title": "PixelPerfect Editor",
+    "companyName": "Lumina Creative",
+    "image": "https://picsum.photos/seed/pixel1/600/400",
+    "description": "A high-performance image editing suite built for modern browsers. Features AI-driven background removal and advanced layering tools for digital artists.",
+    "size": 142,
+    "reviews": 1240,
+    "ratingAvg": 4.8,
+    "downloads": 55000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 110 },
+      { "name": "4 star", "count": 280 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "CodeFlow CI",
+    "companyName": "DevOps Hub",
+    "image": "https://picsum.photos/seed/codeflow/600/400",
+    "description": "Streamline your deployment pipeline with real-time analytics and automated testing. Seamlessly integrates with GitHub, GitLab, and Bitbucket workflows.",
+    "size": 85,
+    "reviews": 890,
+    "ratingAvg": 4.5,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 45 },
+      { "name": "2 star", "count": 55 },
+      { "name": "3 star", "count": 90 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 500 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "ZenTask Manager",
+    "companyName": "Serene Software",
+    "image": "https://picsum.photos/seed/zentask/600/400",
+    "description": "A minimalist task management tool designed to reduce cognitive load. Includes Pomodoro timers and deep-focus modes to boost daily productivity.",
+    "size": 24,
+    "reviews": 3200,
+    "ratingAvg": 4.9,
+    "downloads": 89000,
+    "ratings": [
+      { "name": "1 star", "count": 10 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 2700 }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "DataViz Pro",
+    "companyName": "Insight Metrics",
+    "image": "https://picsum.photos/seed/dataviz/600/400",
+    "description": "Turn complex datasets into beautiful, interactive charts. Supports CSV, JSON, and live SQL database connections for real-time reporting.",
+    "size": 210,
+    "reviews": 450,
+    "ratingAvg": 4.2,
+    "downloads": 15000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 80 },
+      { "name": "4 star", "count": 150 },
+      { "name": "5 star", "count": 150 }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "ShieldVPN",
+    "companyName": "SecurePath Labs",
+    "image": "https://picsum.photos/seed/shield/600/400",
+    "description": "Enterprise-grade encryption with a strict no-logs policy. Features over 500 server locations worldwide to ensure high-speed, private browsing.",
+    "size": 45,
+    "reviews": 15600,
+    "ratingAvg": 4.7,
+    "downloads": 1200000,
+    "ratings": [
+      { "name": "1 star", "count": 400 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 10000 }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "EcoTrack",
+    "companyName": "GreenLogic",
+    "image": "https://picsum.photos/seed/eco/600/400",
+    "description": "Monitor your personal carbon footprint by tracking daily habits and energy consumption. Includes a community leaderboard and sustainability tips.",
+    "size": 38,
+    "reviews": 670,
+    "ratingAvg": 4.4,
+    "downloads": 42000,
+    "ratings": [
+      { "name": "1 star", "count": 25 },
+      { "name": "2 star", "count": 45 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 300 }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "SoundWave Studio",
+    "companyName": "AudioGenic",
+    "image": "https://picsum.photos/seed/sound/600/400",
+    "description": "A cloud-based digital audio workstation for podcasters and musicians. Edit multi-track recordings with professional effects and royalty-free loops.",
+    "size": 320,
+    "reviews": 1100,
+    "ratingAvg": 4.6,
+    "downloads": 28000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 250 },
+      { "name": "5 star", "count": 600 }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "MarketMaster",
+    "companyName": "TradeFlow",
+    "image": "https://picsum.photos/seed/market/600/400",
+    "description": "Real-time stock and crypto tracking with advanced technical indicators. Get instant alerts on price breakouts and market-moving news.",
+    "size": 52,
+    "reviews": 8900,
+    "ratingAvg": 4.3,
+    "downloads": 450000,
+    "ratings": [
+      { "name": "1 star", "count": 600 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "FitFocus",
+    "companyName": "IronCore Health",
+    "image": "https://picsum.photos/seed/fit/600/400",
+    "description": "Comprehensive workout planner with video demonstrations for over 500 exercises. Syncs with wearable devices to track heart rate and calories burned.",
+    "size": 115,
+    "reviews": 4300,
+    "ratingAvg": 4.8,
+    "downloads": 210000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 3000 }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "ChefMate",
+    "companyName": "Culinary Tech",
+    "image": "https://picsum.photos/seed/chef/600/400",
+    "description": "Discover thousands of recipes based on the ingredients you already have. Includes smart grocery lists and nutritional breakdowns for every meal.",
+    "size": 65,
+    "reviews": 2100,
+    "ratingAvg": 4.5,
+    "downloads": 75000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 250 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 1000 }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Nebula Browser",
+    "companyName": "Starlight Systems",
+    "image": "https://picsum.photos/seed/nebula/600/400",
+    "description": "A privacy-first web browser that blocks trackers and intrusive ads by default. Features a built-in crypto wallet and decentralized search options.",
+    "size": 98,
+    "reviews": 560,
+    "ratingAvg": 4.1,
+    "downloads": 33000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 160 }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "TranslateGo",
+    "companyName": "LinguaBridge",
+    "image": "https://picsum.photos/seed/lingua/600/400",
+    "description": "Real-time voice and text translation for over 100 languages. Perfect for travelers, featuring an offline mode for use without cellular data.",
+    "size": 180,
+    "reviews": 12500,
+    "ratingAvg": 4.6,
+    "downloads": 980000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 500 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 7000 }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "AutoVault",
+    "companyName": "SecurePass",
+    "image": "https://picsum.photos/seed/vault/600/400",
+    "description": "Manage your passwords and sensitive documents with zero-knowledge encryption. Includes biometric login and emergency access sharing.",
+    "size": 32,
+    "reviews": 7800,
+    "ratingAvg": 4.9,
+    "downloads": 300000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 6500 }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "StreamLine TV",
+    "companyName": "MediaCore",
+    "image": "https://picsum.photos/seed/stream/600/400",
+    "description": "Aggregates all your favorite streaming services into one unified interface. Provides personalized recommendations based on your viewing history.",
+    "size": 110,
+    "reviews": 3400,
+    "ratingAvg": 4.2,
+    "downloads": 150000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 1100 }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "EduLearn",
+    "companyName": "BrightFuture",
+    "image": "https://picsum.photos/seed/edu/600/400",
+    "description": "Interactive courses covering everything from coding to classical history. Features live tutoring sessions and peer-to-peer study groups.",
+    "size": 250,
+    "reviews": 5100,
+    "ratingAvg": 4.7,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 350 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 3000 }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "TaskFlow CRM",
+    "companyName": "BizLogic",
+    "image": "https://picsum.photos/seed/crm/600/400",
+    "description": "A powerful CRM for small businesses. Track leads, manage customer relationships, and automate your sales funnel with ease.",
+    "size": 155,
+    "reviews": 1200,
+    "ratingAvg": 4.4,
+    "downloads": 25000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 60 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 500 }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "CloudSync",
+    "companyName": "SkyBase",
+    "image": "https://picsum.photos/seed/cloud/600/400",
+    "description": "Unlimited cloud storage for your photos and documents. Features automatic backup and smart tagging for quick file searching.",
+    "size": 42,
+    "reviews": 9800,
+    "ratingAvg": 4.5,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 800 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "MindMap AI",
+    "companyName": "ThoughtFlow",
+    "image": "https://picsum.photos/seed/mind/600/400",
+    "description": "Brainstorm more effectively using AI-generated mind maps. Converts your rough notes into organized, visual diagrams automatically.",
+    "size": 68,
+    "reviews": 320,
+    "ratingAvg": 4.3,
+    "downloads": 12000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 50 },
+      { "name": "4 star", "count": 100 },
+      { "name": "5 star", "count": 120 }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "NightSky Pro",
+    "companyName": "Stellar Apps",
+    "image": "https://picsum.photos/seed/stars/600/400",
+    "description": "An augmented reality stargazing guide. Point your phone at the sky to identify planets, constellations, and satellites in real-time.",
+    "size": 410,
+    "reviews": 6400,
+    "ratingAvg": 4.9,
+    "downloads": 500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "SwiftPay",
+    "companyName": "FinTech Corp",
+    "image": "https://picsum.photos/seed/pay/600/400",
+    "description": "Send and receive money instantly across the globe. Features integrated budget tracking and expense splitting for easy financial management.",
+    "size": 55,
+    "reviews": 22000,
+    "ratingAvg": 4.7,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 800 },
+      { "name": "2 star", "count": 1200 },
+      { "name": "3 star", "count": 3000 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 12000 }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "GameBoost",
+    "companyName": "Nova Games",
+    "image": "https://picsum.photos/seed/game/600/400",
+    "description": "Optimize your system for peak gaming performance. Reduces background lag and prioritizes CPU/GPU resources for your active games.",
+    "size": 28,
+    "reviews": 11500,
+    "ratingAvg": 4.4,
+    "downloads": 1000000,
+    "ratings": [
+      { "name": "1 star", "count": 900 },
+      { "name": "2 star", "count": 1100 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 5000 }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "PhotoArchive",
+    "companyName": "Memory Labs",
+    "image": "https://picsum.photos/seed/photo/600/400",
+    "description": "Digitize and restore old photographs using advanced machine learning. Bring faded memories back to life with vibrant color correction.",
+    "size": 195,
+    "reviews": 840,
+    "ratingAvg": 4.6,
+    "downloads": 45000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 270 },
+      { "name": "5 star", "count": 400 }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "AirQuality Plus",
+    "companyName": "Atmosphere Tech",
+    "image": "https://picsum.photos/seed/air/600/400",
+    "description": "Track local air quality and pollen counts in real-time. Provides health recommendations for people with asthma or seasonal allergies.",
+    "size": 18,
+    "reviews": 4200,
+    "ratingAvg": 4.5,
+    "downloads": 180000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 1100 },
+      { "name": "5 star", "count": 2200 }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "CryptoKeeper",
+    "companyName": "BlockChain Safe",
+    "image": "https://picsum.photos/seed/crypto/600/400",
+    "description": "A non-custodial hardware wallet interface for securing your digital assets. Supports all major tokens and DeFi protocols.",
+    "size": 88,
+    "reviews": 2900,
+    "ratingAvg": 4.8,
+    "downloads": 95000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 600 },
+      { "name": "5 star", "count": 2000 }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "LanguageLink",
+    "companyName": "Polyglot Inc",
+    "image": "https://picsum.photos/seed/lang/600/400",
+    "description": "Practice your speaking skills with native speakers through video chat. Uses a smart matching algorithm to find the best conversation partners.",
+    "size": 130,
+    "reviews": 1100,
+    "ratingAvg": 4.3,
+    "downloads": 50000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 350 },
+      { "name": "5 star", "count": 400 }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "ScanIt All",
+    "companyName": "Paperless Solutions",
+    "image": "https://picsum.photos/seed/scan/600/400",
+    "description": "Turn your smartphone into a high-quality document scanner. Includes OCR technology to convert scanned PDFs into editable text files.",
+    "size": 47,
+    "reviews": 6800,
+    "ratingAvg": 4.7,
+    "downloads": 750000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 1500 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "WeatherWay",
+    "companyName": "GeoCast",
+    "image": "https://picsum.photos/seed/weather/600/400",
+    "description": "Hyper-local weather forecasts with 10-minute precipitation updates. Includes interactive radar maps and severe weather alerts for your area.",
+    "size": 58,
+    "reviews": 14500,
+    "ratingAvg": 4.6,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 1300 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 8000 }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "SleepCycle Pro",
+    "companyName": "DreamHealth",
+    "image": "https://picsum.photos/seed/sleep/600/400",
+    "description": "Analyze your sleep patterns using sound and movement tracking. Includes an intelligent alarm clock that wakes you up during your lightest sleep phase.",
+    "size": 36,
+    "reviews": 9200,
+    "ratingAvg": 4.8,
+    "downloads": 600000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 800 },
+      { "name": "4 star", "count": 2100 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "RecipeVault",
+    "companyName": "HomeCook Hub",
+    "image": "https://picsum.photos/seed/recipe/600/400",
+    "description": "Save recipes from any website and organize them into custom cookbooks. Features a scale-to-portion tool and step-by-step cooking mode.",
+    "size": 44,
+    "reviews": 1800,
+    "ratingAvg": 4.4,
+    "downloads": 40000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 800 }
+    ]
+  },
+  {
+    "id": 30,
+    "title": "AutoFixer",
+    "companyName": "CarCare AI",
+    "image": "https://picsum.photos/seed/car/600/400",
+    "description": "Diagnose engine troubles by connecting to your car's OBD-II sensor via Bluetooth. Provides detailed repair guides and estimated service costs.",
+    "size": 72,
+    "reviews": 3100,
+    "ratingAvg": 4.5,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 450 },
+      { "name": "4 star", "count": 900 },
+      { "name": "5 star", "count": 1500 }
+    ]
+  }
+]
