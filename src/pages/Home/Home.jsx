@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { use } from 'react';
 import Hero from '../../components/Hero/Hero';
 import Sticker from '../../components/Sticker/Sticker';
-import { useLoaderData } from 'react-router';
 import TrendindApps from '../../components/TrendindApps/TrendindApps';
 
-const Home = () => {
-    const appsData = useLoaderData();
+const Home = ({ appDataPromise }) => {
+    const appsData = use(appDataPromise);
     return (
         <div className='text-black'>
             <Hero></Hero>
