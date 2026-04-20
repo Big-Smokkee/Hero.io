@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { createBrowserRouter } from "react-router";
 import Root from '../pages/Root/Root';
 import Home from '../pages/Home/Home';
+import LoadingScreen from '../pages/LoadingScreen/LoadingScreen';
+import AppsSection from '../pages/AppsSection/AppsSection';
 
+const appDataPromise = fetch("/appsData.json").then(res => res.json())
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -10,12 +13,15 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: () => fetch("/appsData.json"),
-                Component: Home
+                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
+                    <Home appDataPromise={appDataPromise}></Home>
+                </Suspense>
             },
             {
                 path: '/apps',
-                element: <div>ki je kori</div>
+                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
+                    <AppsSection appDataPromise={appDataPromise}></AppsSection>
+                </Suspense>
             }
         ]
     },
