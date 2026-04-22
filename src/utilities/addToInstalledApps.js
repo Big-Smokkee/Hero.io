@@ -21,4 +21,11 @@ const addToInstalledApps = (id) => {
         localStorage.setItem('installedAppsList', data);
     }
 }
-export { addToInstalledApps, loadInstalledApps };
+
+const deleteFromInstalledApps = (id) => {
+    const storedAppsData = loadInstalledApps();
+    const updatedInstalledApps = storedAppsData.filter(appId => appId !== id)
+    // localStorage.removeItem(id, "");
+    localStorage.setItem("installedAppsList", JSON.stringify(updatedInstalledApps));
+}
+export { addToInstalledApps, loadInstalledApps, deleteFromInstalledApps };
