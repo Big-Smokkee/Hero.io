@@ -1,18 +1,16 @@
 import { Download, Star } from 'lucide-react';
 import React from 'react';
-import { addToInstalledApps } from '../../utilities/addToInstalledApps';
+
 import { Link } from 'react-router';
 
 const TrendingApp = ({ app }) => {
     // console.log(app);
     const { companyName, title, downloads, ratingAvg, image, id } = app;
-    const handleInstalledApps = (id) => {
-        addToInstalledApps(id);
-    }
+
 
     return (
         <Link to={`/apps/${id}`}>
-            <div className='w-70 h-full flex flex-col rounded-2xl border border-[#D9D9D9] p-4 shadow cursor-pointer' onClick={() => { handleInstalledApps(id) }}>
+            <div className='w-70 h-full flex flex-col rounded-2xl border border-[#D9D9D9] p-4 shadow cursor-pointer'>
                 <img src={image} alt="image alter" className='w-full h-79 rounded-xl mb-4' />
                 <h4 className='text-xl font-medium mb-4'>{companyName}: {title}</h4>
                 <div className='flex justify-between items-center'>
