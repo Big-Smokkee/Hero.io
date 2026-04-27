@@ -1,9 +1,14 @@
 import React from 'react';
 import TrendingApp from '../TrendingApp/TrendingApp';
+import { useNavigate } from 'react-router';
 
 const TrendindApps = ({ appsData }) => {
     console.log(appsData)
     const trendingApp = appsData.slice(0, 8);
+    const navigate = useNavigate();
+    const handleNavigate = () => {
+        navigate('/apps');
+    }
     return (
         <div className='mt-20 inter'>
             <h2 className='text-[#001931] text-5xl text-center mb-4'>Trending Apps</h2>
@@ -14,8 +19,7 @@ const TrendindApps = ({ appsData }) => {
                 }
             </div>
             <div className='flex justify-center mt-10 mb-20'>
-
-                <button className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white px-10 py-4 rounded-xl font-semibold'>
+                <button className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white px-10 py-4 rounded-xl font-semibold cursor-pointer' onClick={() => handleNavigate()}>
                     Show All
                 </button>
             </div>
