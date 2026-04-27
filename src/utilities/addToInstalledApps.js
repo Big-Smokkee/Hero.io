@@ -1,3 +1,5 @@
+import { toast } from "react-toastify";
+
 const loadInstalledApps = () => {
     const storedAppsSTR = localStorage.getItem("installedAppsList");
     if (storedAppsSTR) {
@@ -13,7 +15,7 @@ const loadInstalledApps = () => {
 const addToInstalledApps = (id) => {
     const storedAppsData = loadInstalledApps();
     if (storedAppsData.includes(id)) {
-        alert("App is already installed");
+        toast("App is already installed");
     }
     else {
         storedAppsData.push(id);
@@ -25,7 +27,6 @@ const addToInstalledApps = (id) => {
 const deleteFromInstalledApps = (id) => {
     const storedAppsData = loadInstalledApps();
     const updatedInstalledApps = storedAppsData.filter(appId => appId !== id)
-    // localStorage.removeItem(id, "");
     localStorage.setItem("installedAppsList", JSON.stringify(updatedInstalledApps));
 }
 export { addToInstalledApps, loadInstalledApps, deleteFromInstalledApps };
