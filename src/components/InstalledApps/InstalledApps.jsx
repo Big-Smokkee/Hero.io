@@ -2,6 +2,7 @@ import React from 'react';
 import { Download, HandPlatter, Star } from 'lucide-react';
 import { deleteFromInstalledApps } from '../../utilities/addToInstalledApps';
 import { toast } from 'react-toastify';
+import './InstalledApps.css';
 const InstalledApps = ({ app }) => {
     const { companyName, title, downloads, ratingAvg, image, size, id } = app;
     const handleRemoveFromList = (id) => {
@@ -9,7 +10,7 @@ const InstalledApps = ({ app }) => {
         toast(`${title} is uninstalled successfully`);
     }
     return (
-        <div className='flex items-center justify-between p-4 border border-[#D9D9D9] rounded-2xl my-3'>
+        <div className='flex items-center justify-between p-4 border border-[#D9D9D9] rounded-2xl my-3 inter'>
             <div className='flex items-center gap-4'>
                 <img src={image} alt="image" className='w-60 h-auto rounded-xl' />
                 <div>
