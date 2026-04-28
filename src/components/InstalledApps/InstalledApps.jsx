@@ -1,18 +1,19 @@
 import React from 'react';
 import { Download, HandPlatter, Star } from 'lucide-react';
 import { deleteFromInstalledApps } from '../../utilities/addToInstalledApps';
+import { toast } from 'react-toastify';
 const InstalledApps = ({ app }) => {
     const { companyName, title, downloads, ratingAvg, image, size, id } = app;
     const handleRemoveFromList = (id) => {
         deleteFromInstalledApps(id);
-        console.log('Clicked')
+        toast(`${title} is uninstalled successfully`);
     }
     return (
         <div className='flex items-center justify-between p-4 border border-[#D9D9D9] rounded-2xl my-3'>
             <div className='flex items-center gap-4'>
                 <img src={image} alt="image" className='w-60 h-auto rounded-xl' />
                 <div>
-                    <div className='flex text-[#001931] font-medium text-xl'>
+                    <div className='flex text-[#001931] font-medium text-xl gap-1'>
                         <p>{companyName}: </p>
                         <p>{title}</p>
                     </div>
@@ -32,7 +33,7 @@ const InstalledApps = ({ app }) => {
                 </div>
             </div>
             <div>
-                <button className='px-4 py-3 bg-[#00D390] text-white rounded font-semibold' onClick={() => handleRemoveFromList(id)}>Uninstall</button>
+                <button className='px-4 py-3 bg-[#00D390] text-white rounded font-semibold cursor-pointer' onClick={() => handleRemoveFromList(id)}>Uninstall</button>
             </div>
         </div>
     );
