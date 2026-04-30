@@ -1,10 +1,39 @@
 import React, { use, useEffect, useState } from 'react';
 import { loadInstalledApps } from '../../utilities/addToInstalledApps';
 import InstalledApps from '../../components/InstalledApps/InstalledApps';
+import { ChevronDown } from 'lucide-react';
+import { toast } from 'react-toastify';
+import './InstallationPage.css';
 
 const InstallationPage = ({ appDataPromise }) => {
     const appData = use(appDataPromise);
     const [myInstalledApps, setMyInstalledApps] = useState([]);
+    const [sortedApps, setSortedApps] = useState("Sort By Downloads");
+
+    const parseDownloads = (downloads) => {
+        if (downloads.endsWith("M")) {
+            return parseFloat(downloads) * 1000000;
+        }
+        if (downloads.endsWith("K")) {
+            return parseFloat(downloads) * 1000;
+        }
+    }
+    const handleSortedApps = (type) => {
+        if (type === "highToLow") {
+            const sortByDownloadHighToLow = [...myInstalledApps].sort((a, b) => parseDownloads(b.downloads) - parseDownloads(a.downloads));
+            setSortedApps("High - Low");
+            setMyInstalledApps(sortByDownloadHighToLow);
+            toast("Installed Apps are now sorted in High to Low");
+        }
+        if (type === "lowToHigh") {
+            const sortByDownloadLowToHigh = [...myInstalledApps].sort((a, b) => parseDownloads(a.downloads) - parseDownloads(b.downloads));
+            setSortedApps("Low - High");
+            setMyInstalledApps(sortByDownloadLowToHigh);
+            toast("Installed Apps are now sorted in Low to High");
+        }
+
+    }
+
     useEffect(() => {
         const stored = loadInstalledApps();
         console.log(stored);
@@ -18,7 +47,7 @@ const InstallationPage = ({ appDataPromise }) => {
 
 
     return (
-        <div className="p-20 text-black">
+        <div className="p-20 text-black inter">
             <div className='text-center'>
                 <h2 className="text-5xl font-semibold mb-4 text-[#001931]">Your Installed Apps</h2>
                 <p className='text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
@@ -29,8 +58,17 @@ const InstallationPage = ({ appDataPromise }) => {
                     <p>Apps Found</p>
                 </div>
                 <div>
-                    {/* <input type="search" name="Search App" id="" placeholder='search apps' className='border border-[#D2D2D2]   px-3 py-4 rounded-xl text-[#001931]' /> */}
-                    <input type="" name="" id="" placeholder='Sort By Size' />
+                    <div className="dropdown dropdown-end">
+                        <div tabIndex={0} role="button" className="btn m-1 flex items-center gap-1 bg-white text-black border-[#D9D9D9]">
+                            <p>{sortedApps}</p>
+                            {/* <ChevronDown /> */}
+                            <ChevronDown></ChevronDown>
+                        </div>
+                        <ul tabIndex="-1" className="dropdown-content menu bg-white rounded-box z-1 w-52 p-2 shadow-sm border-[#D9D9D9] border">
+                            <li><a onClick={() => handleSortedApps("highToLow")}>High - Low</a></li>
+                            <li><a onClick={() => handleSortedApps("lowToHigh")}>Low - High</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div>
