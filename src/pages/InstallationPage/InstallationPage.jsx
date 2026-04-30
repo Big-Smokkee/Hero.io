@@ -1,12 +1,15 @@
-import React, { use, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { loadInstalledApps } from '../../utilities/addToInstalledApps';
 import InstalledApps from '../../components/InstalledApps/InstalledApps';
 import { ChevronDown } from 'lucide-react';
 import { toast } from 'react-toastify';
 import './InstallationPage.css';
+import { useLoaderData } from 'react-router';
 
-const InstallationPage = ({ appDataPromise }) => {
-    const appData = use(appDataPromise);
+// const InstallationPage = ({ appDataPromise }) => {
+const InstallationPage = () => {
+    // const appData = use(appDataPromise);
+    const appData = useLoaderData();
     const [myInstalledApps, setMyInstalledApps] = useState([]);
     const [sortedApps, setSortedApps] = useState("Sort By Downloads");
 
