@@ -1,7 +1,9 @@
 import React from 'react';
 import notFoundPng from '../../assets/error-404.png';
-import { useNavigate } from 'react-router';
+import { useLoaderData, useNavigate } from 'react-router';
 const PageNotFound = () => {
+    const appData = useLoaderData();
+    console.log(appData);
     const navigate = useNavigate();
     const handleNavigate = () => {
         navigate(-1);
