@@ -8,7 +8,11 @@ const AppNotFound = () => {
             <img src={notFoundPng} alt="error image" />
             <h3 className='text-violet-950 text-5xl'>App Is Not Found</h3>
             <p className='text-lg text-gray-500'>The app you are looking for does not exist or has been removed</p>
-            <button className='px-4 py-3 rounded-xl font-semibold bg-violet-950 text-white cursor-pointer' onClick={() => navigate('/')}>Back To Home</button>
+            <div className='flex gap-4'>
+                <button className='px-4 py-3 rounded-xl font-semibold bg-violet-950 text-white cursor-pointer' onClick={() => navigate('/')}>Back To Home</button>
+                <button className='px-4 py-3 rounded-xl font-semibold bg-violet-950 text-white cursor-pointer' onClick={() => navigate(-1)}>Go Back</button>
+            </div>
+
         </div>
     );
 };
