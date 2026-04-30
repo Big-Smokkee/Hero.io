@@ -1,10 +1,13 @@
-import React, { use, useState } from 'react';
+import React, { useState } from 'react';
 import TrendingApp from '../../components/TrendingApp/TrendingApp';
 import './AppsSection.css'
 import AppNotFound from '../AppNotFound/AppNotFound';
+import { useLoaderData } from 'react-router';
 
-const AppsSection = ({ appDataPromise }) => {
-    const appData = use(appDataPromise);
+// const AppsSection = ({ appDataPromise }) => {
+const AppsSection = () => {
+    // const appData = use(appDataPromise);
+    const appData = useLoaderData();
     // const [numberOfApps, setNumberOfApps] = useState(appData.length);
     const [searchTerm, setSearchTerm] = useState("");
     const handleForm = (e) => {
