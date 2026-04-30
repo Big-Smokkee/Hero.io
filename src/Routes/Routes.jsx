@@ -23,15 +23,19 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/apps',
-                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
-                    <AppsSection appDataPromise={appDataPromise}></AppsSection>
-                </Suspense>
+                // element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
+                //     <AppsSection appDataPromise={appDataPromise}></AppsSection>
+                // </Suspense>
+                loader: () => fetch("/appsData.json"),
+                Component: AppsSection
             },
             {
                 path: '/installation',
-                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
-                    <InstallationPage appDataPromise={appDataPromise}></InstallationPage>
-                </Suspense>
+                // element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
+                //     <InstallationPage appDataPromise={appDataPromise}></InstallationPage>
+                // </Suspense>
+                loader: () => fetch("/appsData.json"),
+                Component: InstallationPage
             },
             {
                 path: '/apps/:appDetails',
@@ -39,17 +43,18 @@ export const router = createBrowserRouter([
                 //     {/* <AppsSection appDataPromise={appDataPromise}></AppsSection> */}
                 //     <AppDetails appDataPromise={appDataPromise}></AppDetails>
                 // </Suspense>
-                loader: ({ params }) => fetch(`/appsData.json/${params.appDetails}`),
-                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
-                    <AppDetails appDataPromise={appDataPromise}></AppDetails>
-                </Suspense>,
+                // loader: ({ params }) => fetch(`/appsData.json/${params.appDetails}`),
+                loader: async ({ params }) => {
+                    const res = await fetch("/appsData.json");
+                    const data = await res.json();
+                    return data.find(app => app.id === parseInt(params.appDetails));
+                },
+                Component: AppDetails,
                 errorElement: <AppNotFound></AppNotFound>
             },
             {
                 path: "*",
-                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
-                    <PageNotFound></PageNotFound>
-                </Suspense>
+                Component: PageNotFound
             }
         ]
     },
