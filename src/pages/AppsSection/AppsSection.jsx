@@ -1,10 +1,25 @@
-import React, { use } from 'react';
+import React, { use, useState } from 'react';
 import TrendingApp from '../../components/TrendingApp/TrendingApp';
 import './AppsSection.css'
+import AppNotFound from '../AppNotFound/AppNotFound';
 
 const AppsSection = ({ appDataPromise }) => {
     const appData = use(appDataPromise);
     // const [numberOfApps, setNumberOfApps] = useState(appData.length);
+    const [searchTerm, setSearchTerm] = useState("");
+    const handleForm = (e) => {
+        // console.log(e.target.value);
+        const input = e.target.value.toLowerCase();
+        // console.log(input);
+        setSearchTerm(input);
+    }
+
+
+    const filteredApps = appData.filter(app =>
+        app.title.toLowerCase().includes(searchTerm)
+    );
+
+
 
     return (
         <div className='text-black mt-20 mb-20 px-6 md:px-20 inter' >
@@ -15,18 +30,26 @@ const AppsSection = ({ appDataPromise }) => {
 
             <div className='flex items-center justify-between mb-6'>
                 <div className='flex gap-1 text-2xl text-[#001931]'>
-                    <span>({appData.length})</span>
+                    <span>({filteredApps.length})</span>
                     <p>Apps Found</p>
                 </div>
                 <div>
-                    <input type="search" name="Search App" id="" placeholder='search apps' className='border border-[#D2D2D2]   px-3 py-4 rounded-xl text-[#001931]' />
+                    <input type="search" name="SearchApp" id="" placeholder='search apps' value={searchTerm} className='border border-[#D2D2D2]   px-3 py-4 rounded-xl text-[#001931]' onChange={(e) => handleForm(e)} />
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 '>
-                {
-                    appData.map(app => <TrendingApp app={app} key={app.id}></TrendingApp>)
-                }
+            <div>
+                <div className='flex items-center justify-center'>
+
+                    {
+                        (filteredApps.length === 0) && <AppNotFound></AppNotFound>
+                    }
+                </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                    {
+                        filteredApps.map(app => <TrendingApp app={app} key={app.id}></TrendingApp>)
+                    }
+                </div >
             </div>
         </div>
     );
