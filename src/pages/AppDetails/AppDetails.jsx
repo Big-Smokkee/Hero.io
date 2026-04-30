@@ -1,25 +1,38 @@
-import React, { use, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import downloadImg from '../../assets/icon-downloads.png';
 import ratingImg from '../../assets/icon-ratings.png';
-import { addToInstalledApps } from '../../utilities/addToInstalledApps';
+import { addToInstalledApps, loadInstalledApps } from '../../utilities/addToInstalledApps';
 import reviewImg from '../../assets/icon-review.png';
 import { toast } from 'react-toastify';
+import { Bar, BarChart, XAxis, YAxis } from 'recharts'
 const AppDetails = ({ appDataPromise }) => {
     const params = useParams();
     const appData = use(appDataPromise);
 
     const { appDetails } = params;
     const appDetailsId = parseInt(appDetails);
-    console.log(appDetailsId);
-    console.log(appData);
+    // console.log(appDetailsId);
+    // console.log(appData);
     const app = appData.find(app => appDetailsId === app.id);
-    console.log(app);
+    // console.log(app);
 
-
-    const { companyName, title, downloads, ratingAvg, image, reviews, size, id } = app;
+    const { companyName, title, downloads, ratingAvg, image, reviews, size, id, description } = app;
     const [installBtn, setInstallBtn] = useState(false);
     const [btnName, setBtnName] = useState(`Install Now (${size} MB)`);
+    //matiral for the chart
+    const { ratings } = app;
+
+
+
+    useEffect(() => {
+        const allInstalledApps = loadInstalledApps();
+        const installed = allInstalledApps.find(appId => appId === id);
+        if (installed) {
+            setInstallBtn(true);
+            setBtnName("Installed");
+        }
+    }, [id]);
 
     const handleInstalledApps = (id) => {
         addToInstalledApps(id);
@@ -28,10 +41,11 @@ const AppDetails = ({ appDataPromise }) => {
         setBtnName("Installed");
     }
 
+
     return (
-        <div className='p-20 text-black'>
+        <div className='p-20 text-black my-10'>
             <div className='flex gap-10'>
-                <img src={image} alt="" className='w-96 h-96' />
+                <img src={image} alt="" className='w-100 h-100 object-cover rounded-2xl shadow-lg shadow-[#632EE3]' />
                 <div>
                     <h2 className='text-3xl font-medium mb-1'>{companyName}: {title}</h2>
                     <p className='text-xl text-[#627382]'>Developed by
@@ -56,9 +70,37 @@ const AppDetails = ({ appDataPromise }) => {
                         </div>
                     </div>
                     <div className='mt-7'>
-                        <button className='text-white font-semibold  bg-linear-to-r from-[#00D390] to-[#00a370] px-5 py-3.5 rounded' onClick={() => { handleInstalledApps(id) }} disabled={installBtn}>{btnName}</button>
+                        <button className='text-white font-semibold  bg-linear-to-r from-[#00D390] to-[#00a370] px-5 py-3.5 rounded' onClick={() => {
+                            handleInstalledApps(id)
+                        }} disabled={installBtn}>{btnName}</button>
                     </div>
                 </div>
+            </div>
+            <div className='border-b border-[#3b3b3bb6] mt-7 mb-7'></div>
+            <div>
+                <h2 className='text-[#001931] text-2xl font-semibold'>Ratings</h2>
+
+                <BarChart
+                    layout="vertical"
+                    width={1200}
+                    height={300}
+                    data={ratings}
+                    className='my-7'
+                >
+                    {/* Y-axis এ star labels */}
+                    <YAxis type="category" dataKey="name" />
+                    {/* X-axis এ count values */}
+                    <XAxis type="number" />
+                    {/* প্রতিটি bar count অনুযায়ী আঁকা হবে */}
+                    <Bar dataKey="count" fill="#00D390" />
+                </BarChart>
+            </div>
+            <div className='border-b border-[#3b3b3bb6] mt-7 mb-7'></div>
+            <div>
+                <h2 className='text-[#001931] text-2xl font-semibold'>Description</h2>
+                <p className='text-[#627382] mt-6'>
+                    {description}
+                </p>
             </div>
         </div>
     );
