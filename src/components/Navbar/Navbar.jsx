@@ -58,7 +58,7 @@ const Navbar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link className='flex gap-2.5 bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-3 rounded-xl items-center' to="https://github.com/Big-Smokkee">
+                <Link className='flex gap-2.5 bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white px-2 md:px-4 py-3 rounded-xl items-center' to="https://github.com/Big-Smokkee">
                     <img src={githubImg} alt="githubImg" />
                     <p>Contribute</p>
                 </Link>
