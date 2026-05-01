@@ -14,7 +14,7 @@ const InstalledApps = ({ app }) => {
         <Link to={`/apps/${id}`} className='cursor-pointer'>
             <div className='flex flex-col md:flex-row items-center justify-between p-4 border border-[#D9D9D9] rounded-2xl my-3 inter'>
                 <div className='flex flex-col md:flex-row items-center gap-4'>
-                    <img src={image} alt="image" className='w-60 h-auto rounded-xl' />
+                    <img src={image} alt="image" className='w-full md:w-60 h-auto rounded-xl' />
                     <div>
                         <div className='flex text-center text-[#001931] font-medium text-xl gap-1'>
                             <p className='hidden md:block'>{companyName}: </p>
