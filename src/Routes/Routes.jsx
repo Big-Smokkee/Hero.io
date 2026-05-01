@@ -9,7 +9,6 @@ import AppDetails from '../pages/AppDetails/AppDetails';
 import PageNotFound from '../pages/PageNotFound/PageNotFound';
 import AppNotFound from '../pages/AppNotFound/AppNotFound';
 
-const appDataPromise = fetch("/appsData.json").then(res => res.json())
 export const router = createBrowserRouter([
     {
         path: "/",
@@ -17,9 +16,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
-                    <Home appDataPromise={appDataPromise}></Home>
-                </Suspense>
+                // element: <Suspense fallback={<LoadingScreen></LoadingScreen>}>
+                //     <Home appDataPromise={appDataPromise}></Home>
+                // </Suspense>
+                loader: () => fetch("/appsData.json"),
+                Component: Home
             },
             {
                 path: '/apps',
