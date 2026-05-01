@@ -30,7 +30,7 @@ const Navbar = () => {
         }> Installation</NavLink >
     ]
     return (
-        <div className="navbar text-black shadow-sm px-10 md:px-16 lg:px-20 py-2 inter">
+        <div className="navbar text-black shadow-sm px-5 md:px-16 lg:px-20 py-2 inter">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const Navbar = () => {
                     to="/"
                     className="bg-clip-text text-transparent font-bold text-xl 
                    bg-linear-to-r from-[#632EE3] to-[#9F62F2] 
-                   hover:opacity-80 transition duration-300 flex gap-1 items-center"
+                   hover:opacity-80 transition duration-300 flex gap-1 items-center flex-col md:flex-row"
                 >
                     <img src={logoImg} alt="logoImg" className='w-10' />
                     <h2>HERO.IO</h2>
