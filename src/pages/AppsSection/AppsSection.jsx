@@ -31,13 +31,23 @@ const AppsSection = () => {
                 <p className='text-[#627382] text-xl'>Explore All Apps on the Market developed by us. We code for Millions</p>
             </div>
 
-            <div className='flex items-center justify-between mb-6 gap-2 md:gap-0'>
-                <div className='flex gap-1 text-xl md:text-2xl text-[#001931] w-1/2'>
+            <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
+                {/* Apps Found */}
+                <div className="flex gap-1 text-xl md:text-2xl text-[#001931] w-full md:w-1/2 justify-center md:justify-start">
                     <span>({filteredApps.length})</span>
                     <p>Apps Found</p>
                 </div>
-                <div className='w-1/2'>
-                    <input type="search" name="SearchApp" id="" placeholder='search apps' value={searchTerm} className='border border-[#D2D2D2]   px-3 py-4 rounded-xl text-[#001931]' onChange={(e) => handleForm(e)} />
+
+                {/* Search Input */}
+                <div className="w-full md:w-1/2">
+                    <input
+                        type="search"
+                        name="SearchApp"
+                        placeholder="Search apps"
+                        value={searchTerm}
+                        onChange={handleForm}
+                        className="w-full border border-[#D2D2D2] px-3 py-4 rounded-xl text-[#001931]"
+                    />
                 </div>
             </div>
 
@@ -48,11 +58,15 @@ const AppsSection = () => {
                         (filteredApps.length === 0) && <AppNotFound></AppNotFound>
                     }
                 </div>
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
-                    {
-                        filteredApps.map(app => <TrendingApp app={app} key={app.id}></TrendingApp>)
-                    }
-                </div >
+                <div className="flex justify-center items-center">
+                    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4'>
+                        {
+                            filteredApps.map(app => (
+                                <TrendingApp app={app} key={app.id} />
+                            ))
+                        }
+                    </div>
+                </div>
             </div>
         </div>
     );
