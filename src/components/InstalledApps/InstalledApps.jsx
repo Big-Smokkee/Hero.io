@@ -12,15 +12,15 @@ const InstalledApps = ({ app }) => {
     }
     return (
         <Link to={`/apps/${id}`} className='cursor-pointer'>
-            <div className='flex items-center justify-between p-4 border border-[#D9D9D9] rounded-2xl my-3 inter'>
-                <div className='flex items-center gap-4'>
+            <div className='flex flex-col md:flex-row items-center justify-between p-4 border border-[#D9D9D9] rounded-2xl my-3 inter'>
+                <div className='flex flex-col md:flex-row items-center gap-4'>
                     <img src={image} alt="image" className='w-60 h-auto rounded-xl' />
                     <div>
-                        <div className='flex text-[#001931] font-medium text-xl gap-1'>
-                            <p>{companyName}: </p>
+                        <div className='flex text-center text-[#001931] font-medium text-xl gap-1'>
+                            <p className='hidden md:block'>{companyName}: </p>
                             <p>{title}</p>
                         </div>
-                        <div className='flex items-center gap-4'>
+                        <div className='flex items-center justify-center md:justify-start gap-4 mb-4'>
                             <div className='flex items-center gap-1 font-medium text-[#00D390]'>
                                 <span><Download size={16} ></Download></span>
                                 <p>{downloads}</p>
