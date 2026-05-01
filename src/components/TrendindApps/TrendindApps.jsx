@@ -13,10 +13,13 @@ const TrendindApps = ({ appsData }) => {
         <div className='mt-20 inter'>
             <h2 className='text-[#001931] font-bold text-4xl md:text-5xl text-center mb-4'>Trending Apps</h2>
             <p className='text-[#627382] text-xl text-center mb-10 px-6 md:px-20'>Explore All Trending Apps on the Market developed by us</p>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 md:px-20'>
-                {
-                    trendingApp.map(app => <TrendingApp app={app} key={app.id}></TrendingApp>)
-                }
+            <div className='flex justify-center'>
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 md:px-20'>
+                    {
+                        trendingApp.map(app => <TrendingApp app={app} key={app.id}></TrendingApp>)
+                    }
+                </div>
+
             </div>
             <div className='flex justify-center mt-10 mb-20'>
                 <button className='bg-linear-to-r from-[#632EE3] to-[#9F62F2] text-white px-10 py-4 rounded-xl font-semibold cursor-pointer' onClick={() => handleNavigate()}>
