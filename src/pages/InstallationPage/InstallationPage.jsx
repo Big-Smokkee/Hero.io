@@ -51,29 +51,41 @@ const InstallationPage = () => {
 
     return (
         <div className="p-6 md:p-20 text-black inter">
-            <div className='text-center'>
+            <div className='text-center mb-6 md:md-0'>
                 <h2 className="text-4xl md:text-5xl font-semibold mb-6 text-[#001931]">Your Installed Apps</h2>
                 <p className='text-[#627382]'>Explore All Trending Apps on the Market developed by us</p>
             </div>
-            <div className='flex items-center justify-between mb-6 gap-2'>
-                <div className='flex gap-1 text-xl md:text-2xl text-[#001931] w-1/2'>
+            <div className="flex flex-col md:flex-row items-center justify-between mb-6 gap-4">
+                {/* Apps Found */}
+                <div className="flex gap-1 text-xl md:text-2xl text-[#001931] w-full md:w-1/2 justify-center md:justify-start">
                     <span>{myInstalledApps.length}</span>
                     <p>Apps Found</p>
                 </div>
 
-                <div className="dropdown dropdown-end w-1/2">
-                    <div tabIndex={0} role="button" className="btn m-1 flex flex-col md:flex-row items-center gap-1 bg-white text-black border-[#D9D9D9]">
+                {/* Dropdown */}
+                <div className="dropdown dropdown-end w-full md:w-1/2 flex justify-center md:justify-end">
+                    <div
+                        tabIndex={0}
+                        role="button"
+                        className="btn m-1 flex flex-row items-center gap-1 bg-white text-black border-[#D9D9D9]"
+                    >
                         <p>{sortedApps}</p>
-                        {/* <ChevronDown /> */}
-                        <ChevronDown></ChevronDown>
+                        <ChevronDown />
                     </div>
-                    <ul tabIndex="-1" className="dropdown-content menu bg-white rounded-box z-1 w-52 p-2 shadow-sm border-[#D9D9D9] border">
-                        <li><a onClick={() => handleSortedApps("highToLow")}>High - Low</a></li>
-                        <li><a onClick={() => handleSortedApps("lowToHigh")}>Low - High</a></li>
+                    <ul
+                        tabIndex={-1}
+                        className="dropdown-content menu bg-white rounded-box z-10 w-52 p-2 shadow-sm border border-[#D9D9D9]"
+                    >
+                        <li>
+                            <a onClick={() => handleSortedApps("highToLow")}>High - Low</a>
+                        </li>
+                        <li>
+                            <a onClick={() => handleSortedApps("lowToHigh")}>Low - High</a>
+                        </li>
                     </ul>
                 </div>
-
             </div>
+
             <div>
                 {
                     myInstalledApps.map(app => <InstalledApps app={app} key={app.id}></InstalledApps>)
