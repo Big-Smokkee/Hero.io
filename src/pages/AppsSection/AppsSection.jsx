@@ -27,16 +27,16 @@ const AppsSection = () => {
     return (
         <div className='text-black mt-20 mb-20 px-6 md:px-20 inter' >
             <div className='mb-10 text-center'>
-                <h2 className='text-[#001931] text-5xl font-bold mb-4'>Our All Applications</h2>
+                <h2 className='text-[#001931] text-4xl md:text-5xl font-bold mb-4'>Our All Applications</h2>
                 <p className='text-[#627382] text-xl'>Explore All Apps on the Market developed by us. We code for Millions</p>
             </div>
 
-            <div className='flex items-center justify-between mb-6'>
-                <div className='flex gap-1 text-2xl text-[#001931]'>
+            <div className='flex items-center justify-between mb-6 gap-2 md:gap-0'>
+                <div className='flex gap-1 text-xl md:text-2xl text-[#001931] w-1/2'>
                     <span>({filteredApps.length})</span>
                     <p>Apps Found</p>
                 </div>
-                <div>
+                <div className='w-1/2'>
                     <input type="search" name="SearchApp" id="" placeholder='search apps' value={searchTerm} className='border border-[#D2D2D2]   px-3 py-4 rounded-xl text-[#001931]' onChange={(e) => handleForm(e)} />
                 </div>
             </div>
