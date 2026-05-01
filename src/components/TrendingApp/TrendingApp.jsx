@@ -10,7 +10,7 @@ const TrendingApp = ({ app }) => {
 
     return (
         <Link to={`/apps/${id}`}>
-            <div className='w-70 h-full flex flex-col rounded-2xl border border-[#D9D9D9] p-4 shadow cursor-pointer
+            <div className='w-full md:w-70 h-full flex flex-col rounded-2xl border border-[#D9D9D9] p-4 shadow cursor-pointer
                transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-lg hover:border-[#632EE3] hover:shadow-[#642ee37e]'>
                 <img src={image} alt="image alter" className='w-full h-79 rounded-xl mb-4 object-cover' />
                 <h4 className='text-xl font-medium mb-4'>{companyName}: {title}</h4>
