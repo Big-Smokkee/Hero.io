@@ -11,8 +11,8 @@ const TrendindApps = ({ appsData }) => {
     }
     return (
         <div className='mt-20 inter'>
-            <h2 className='text-[#001931] text-5xl text-center mb-4'>Trending Apps</h2>
-            <p className='text-[#627382] text-xl text-center mb-10'>Explore All Trending Apps on the Market developed by us</p>
+            <h2 className='text-[#001931] font-bold text-4xl md:text-5xl text-center mb-4'>Trending Apps</h2>
+            <p className='text-[#627382] text-xl text-center mb-10 px-6 md:px-20'>Explore All Trending Apps on the Market developed by us</p>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-6 md:px-20'>
                 {
                     trendingApp.map(app => <TrendingApp app={app} key={app.id}></TrendingApp>)
